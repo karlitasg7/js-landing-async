@@ -9,20 +9,20 @@ async function fetchData(urlApi) {
 
 (async () => {
     try {
-        const videos = await fetchData(API);
+        const quotes = await fetchData(API);
 
         let view = `
-                ${videos.map(video => `
+                ${quotes.map(quote => `
                 <div class="group relative">
                     <div
                         class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md 
                         overflow-hidden group-hover:opacity-75 lg:aspect-none">
-                        ${video.quote}
+                        ${quote.quote}
                     </div>
                     <div class="mt-4 flex justify-between">
                         <h3 class="text-sm text-gray-700">
                             <span aria-hidden="true" class="absolute inset-0"></span>
-                            ${video.character}
+                            ${quote.character}
                         </h3>
                     </div>
                 </div>
